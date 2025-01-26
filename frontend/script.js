@@ -35,3 +35,17 @@ navItems.forEach((item) => {
 document.getElementById("about").style.display = "block"
 document.getElementById("about").classList.add("active")
 
+const counter = document.querySelector(".counter-number");
+
+async function updateCounter() {
+  try {
+    let response = await fetch("https://schgama5koossvbwik6jo4uxsq0vxuzs.lambda-url.us-east-1.on.aws/");
+    let data = await response.json(); // Await the JSON parsing
+    counter.innerHTML = `Total number of views: ${data}`;
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    counter.innerHTML = "Failed to load view count.";
+  }
+}
+
+updateCounter();

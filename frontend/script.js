@@ -39,7 +39,7 @@ const counter = document.querySelector(".counter-number");
 
 async function updateCounter() {
   try {
-    let response = await fetch("https://schgama5koossvbwik6jo4uxsq0vxuzs.lambda-url.us-east-1.on.aws/");
+    let response = await fetch("https://hylh332osxbvauini3qwe6ejzq0wymoc.lambda-url.us-east-1.on.aws/");
     let data = await response.json(); // Await the JSON parsing
     counter.innerHTML = `Total number of views: ${data}`;
   } catch (error) {

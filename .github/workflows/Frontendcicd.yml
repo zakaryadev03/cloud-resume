@@ -28,6 +28,7 @@ jobs:
   invalidate-cloudfront-distribution:
     needs: deploy
     runs-on: ubuntu-latest
+    environment: s3-deployment
     steps:
       - name: Invalidate CloudFront
         uses: chetan/invalidate-cloudfront-action@v2

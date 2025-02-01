@@ -1,0 +1,6 @@
+provider.tf
+.terraform
+.terraform.lock.hcl
+terraform.t*
+packedlambda*
+lambda_function.zip

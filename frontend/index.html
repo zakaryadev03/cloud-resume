@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Geometric Background -->
+        <div class="geometric-bg"></div>
+    
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="nav-item active" data-section="about">
+                <i class="fas fa-user"></i>
+                <span>ABOUT</span>
+            </div>
+            <div class="nav-item" data-section="resume">
+                <i class="fas fa-file-alt"></i>
+                <span>RESUME</span>
+            </div>
+            <div class="nav-item" data-section="portfolio">
+                <i class="fas fa-briefcase"></i>
+                <span>PORTFOLIO</span>
+            </div>
+            <div class="nav-item" data-section="blog">
+                <i class="fas fa-blog"></i>
+                <span>BLOG</span>
+            </div>
+            <div class="nav-item" data-section="contact">
+                <i class="fas fa-envelope"></i>
+                <span>CONTACT</span>
+            </div>
+            <div class="counter-number nav-item">Total number of views: Loading...</div>
+        </nav>
+    
+        <!-- Main Content -->
+        <main class="content">
+            <!-- About Section -->
+            <section id="about" class="content-section">
+                <div class="profile">
+                    <div class="profile-image">
+                        <img src="/placeholder.svg?height=150&width=150" alt="Profile Picture">
+                    </div>
+                    <div class="profile-info">
+                        <h1>Your Name</h1>
+                        <p>DevOps | SRE | Cloud Engineer</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitch"></i></a>
+                        </div>
+                    </div>
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <span>EMAIL</span>
+                            <a href="mailto:your.email@example.com">your.email@example.com</a>
+                        </div>
+                        <div class="info-item">
+                            <span>LOCATION</span>
+                            <p>Your Location</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about">
+                    <h2>About Me</h2>
+                    <p>A passionate and skilled DevOps, SRE, and Cloud Engineer with a strong background in infrastructure provisioning, automation, and monitoring.</p>
+                </div>
+                <div class="what-im-doing">
+                    <h2>What I'm Doing</h2>
+                    <div class="cards">
+                        <div class="card">
+                            <i class="fas fa-code"></i>
+                            <h3>DevOps</h3>
+                            <p>I enjoy improving the speed and quality of delivery, automating and achieving CI/CD</p>
+                        </div>
+                        <div class="card">
+                            <i class="fas fa-cloud"></i>
+                            <h3>Cloud Engineer</h3>
+                            <p>I enjoy designing, securing and maintaining an organization's cloud-based infrastructure and applications</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Resume Section -->
+            <section id="resume" class="content-section" style="display: none;">
+                <h2>Resume</h2>
+                <div class="resume-section">
+                    <h3>Work Experience</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <h4>Senior DevOps Engineer</h4>
+                            <p class="company">Tech Company Inc.</p>
+                            <p class="period">2020 - Present</p>
+                            <ul>
+                                <li>Led the implementation of CI/CD pipelines</li>
+                                <li>Optimized cloud infrastructure, reducing costs by 30%</li>
+                                <li>Implemented monitoring and alerting systems</li>
+                            </ul>
+                        </div>
+                        <!-- Add more work experience items as needed -->
+                    </div>
+                </div>
+                <div class="resume-section">
+                    <h3>Education</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <h4>Bachelor of Science in Computer Science</h4>
+                            <p class="company">University Name</p>
+                            <p class="period">2012 - 2016</p>
+                        </div>
+                        <!-- Add more education items as needed -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Portfolio Section -->
+            <section id="portfolio" class="content-section" style="display: none;">
+                <h2>Portfolio</h2>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <img src="/placeholder.svg?height=200&width=300" alt="Project 1">
+                        <div class="portfolio-info">
+                            <h3>Project 1</h3>
+                            <p>DevOps</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="/placeholder.svg?height=200&width=300" alt="Project 2">
+                        <div class="portfolio-info">
+                            <h3>Project 2</h3>
+                            <p>Cloud Engineering</p>
+                        </div>
+                    </div>
+                    <!-- Add more portfolio items as needed -->
+                </div>
+            </section>
+
+            <!-- Blog Section -->
+            <section id="blog" class="content-section" style="display: none;">
+                <h2>Blog</h2>
+                <div class="blog-posts">
+                    <div class="blog-post">
+                        <h3>Understanding CI/CD Pipelines</h3>
+                        <p>Posted on: May 15, 2023</p>
+                        <p>A deep dive into Continuous Integration and Continuous Deployment...</p>
+                        <a href="#">Read More</a>
+                    </div>
+                    <div class="blog-post">
+                        <h3>Cloud Cost Optimization Strategies</h3>
+                        <p>Posted on: April 22, 2023</p>
+                        <p>Learn how to optimize your cloud infrastructure costs...</p>
+                        <a href="#">Read More</a>
+                    </div>
+                    <!-- Add more blog posts as needed -->
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="content-section" style="display: none;">
+                <h2>Contact Me</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit">Send Message</button>
+                </form>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+

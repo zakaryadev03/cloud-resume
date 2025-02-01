@@ -1,16 +1,14 @@
 terraform {
   required_providers {
     aws = {
-      source  = "hashicorp/aws"
-      version = "~> 4.16"
+      source = "hashicorp/aws"
+      version = "5.84.0"
     }
   }
-
-  required_version = ">= 1.2.0"
 }
 
 provider "aws" {
-  profile                  = "aws-resume" # rename your aws cli profile
+  profile                  = "default"
   region                   = "us-east-1"
 }
 
@@ -40,11 +38,10 @@ resource "aws_dynamodb_table" "visitor_count_ddb" {
   }
 
   tags = {
-    Name = "Cloud Resume Challenge"
+    Name = "Aws cloud resume challenge"
   }
 }
 
-# DynamoDB Table Item
 resource "aws_dynamodb_table_item" "visitor_count_ddb" {
   table_name = aws_dynamodb_table.visitor_count_ddb.name
   hash_key   = aws_dynamodb_table.visitor_count_ddb.hash_key
@@ -156,7 +153,7 @@ resource "aws_lambda_function" "terraform_lambda_func" {
 resource "aws_apigatewayv2_api" "visitor_counter_api" {
   name          = "visitor_counter_http_api"
   protocol_type = "HTTP"
-  description   = "Visitor counter HTTP API to invoke AWS Lambda function to update & retrieve the visitors count"
+  description   = "Visitor counter HTTP API to invoke AWS Lambda function to update and retrieve the visitors count"
   cors_configuration {
       allow_credentials = false
       allow_headers     = []

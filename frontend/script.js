@@ -35,17 +35,22 @@ navItems.forEach((item) => {
 document.getElementById("about").style.display = "block"
 document.getElementById("about").classList.add("active")
 
-const counter = document.querySelector(".counter-number");
-
-async function updateCounter() {
+// GET API REQUEST
+async function get_visitors() {
+  // call post api request function
+  //await post_visitor();
   try {
-    let response = await fetch("https://hylh332osxbvauini3qwe6ejzq0wymoc.lambda-url.us-east-1.on.aws/");
-    let data = await response.json(); // Await the JSON parsing
-    counter.innerHTML = `Total number of views: ${data}`;
-  } catch (error) {
-    console.error("Error fetching data:", error);
-    counter.innerHTML = "Failed to load view count.";
+      let response = await fetch('https://mamg1590n0.execute-api.us-east-1.amazonaws.com/default/VisitorCounter', {
+          method: 'GET',
+      });
+      let data = await response.json()
+      document.getElementById("visitors").innerHTML = data['count'];
+      console.log(data);
+      return data;
+  } catch (err) {
+      console.error(err);
   }
 }
 
-updateCounter();
+
+get_visitors();

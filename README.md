@@ -43,4 +43,4 @@ The Cloud Resume Challenge includes a series of tasks that simulate real-world c
 
 ## 📷 Demo
 
-![screenshot](./resume.jpg)
+![screenshot](./resume2.jpg)

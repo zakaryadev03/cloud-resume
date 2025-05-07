@@ -10,7 +10,7 @@ The Cloud Resume Challenge includes a series of tasks that simulate real-world c
 - [x] Created a resume as a responsive, styled HTML page.
 - [x] Hosted the resume on **Amazon S3** as a static website.
 - [x] Used **HTTPS** via Amazon CloudFront.
-- [ ] Set up a custom domain with **Route 53** *(I didnt implemented)*.
+- [ ] Set up a custom domain with **Route 53** *(I didnt implement it)*.
 
 ### ✅ Backend
 - [x] Created a **visitor counter** using **AWS Lambda**, **API Gateway**, and **DynamoDB**.
@@ -43,4 +43,4 @@ The Cloud Resume Challenge includes a series of tasks that simulate real-world c
 
 ## 📷 Demo
 
-![screenshot](./resume.png)
+![screenshot](./resume.jpg)
